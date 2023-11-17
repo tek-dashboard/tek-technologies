@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
-  --primary: #17f86d;
-  --secondary: #1097e5;
+  --primary: #4f6d7a;
+  --secondary: #c0d6df;
 }
 body {
   margin: 0;
@@ -45,11 +45,11 @@ header nav h1 {
 }
 header nav a {
   text-decoration: none;
-  padding: 6px;
   border-radius: 4px;
 }
 header nav a.active {
   background: var(--secondary);
+  color: var(--primary) !important;
 }
 
 /* page content */
@@ -65,17 +65,18 @@ main {
   margin-top: 30px;
 }
 
-.help-page nav  a {
+nav  a {
   border: 5px solid white;
   padding: 10px;
   border-radius: 4px;
   text-decoration: none;
+  color: whitesmoke !important;
 }
-.help-page nav a:hover {
-  border-color: #1097e5;
+ nav a:hover {
+  border-color: #e8dab2;
 }
-.help-page nav a:active {
-  border-color: #f84417;
+ nav a:active {
+  border-color: #dd6e42;
 }
 /* faq */
 .login-button {
