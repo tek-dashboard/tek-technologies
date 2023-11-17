@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import DashBoard from "./pages/DashBoard";
+import HomePage from "./pages/HomePage";
 
 import {
   createBrowserRouter,
@@ -15,13 +16,11 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<NavLayout />}>
-    
-                  
-                    <Route path='profile' element={<Profile />} /> 
-                    <Route path="login" element={<Login />} />
-                    <Route path="logout" element={<Logout />} /> 
-                    <Route path="dashboard" element={<DashBoard />} />
-
+      <Route index element={<HomePage />} />
+      <Route path="profile" element={<Profile />} />
+      <Route path="login" element={<Login />} />
+      <Route path="logout" element={<Logout />} />
+      <Route path="dashboard" element={<DashBoard />} />
     </Route>
   )
 );

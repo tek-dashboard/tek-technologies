@@ -20,7 +20,8 @@ class NavLayout extends React.Component {
               ) : (
                 <NavLink to="login">Login</NavLink>
               )}
-              {/* <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
+              {/* 
               <NavLink to="about">About Us</NavLink> */}
             
           </nav>
