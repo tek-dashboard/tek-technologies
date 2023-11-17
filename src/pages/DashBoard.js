@@ -46,7 +46,10 @@ class SecretContent extends Component {
   
     return (
       <>
-        <h1>Secret Cats!</h1>
+      <section>
+      <h1>Secret Cats!</h1>
+      </section>
+        
       
       </>
     );
