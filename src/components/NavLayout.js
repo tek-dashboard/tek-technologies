@@ -10,10 +10,7 @@ class NavLayout extends React.Component {
       <section className='root-layout'>
         <header>
           <nav>
-            <h1>React Router</h1>
-
-            {/* <NavLink to="login"  className="login-button">LOGIN IN NOW</NavLink>
-            <NavLink to="logout" className="login-button">LOG OUT!!!!</NavLink> */}
+            <h1>tekDash</h1>
             {this.props.auth0.isAuthenticated ? (
                 <>
                 <NavLink to="profile">Profile</NavLink>
