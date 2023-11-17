@@ -96,3 +96,15 @@ main section {
 .profile-margin {
   margin-top: 20px;
 }
+
+footer  {
+  background: var(--primary);
+  bottom:0;
+  right:0;
+  left:0;
+  position: fixed; 
+}
+
+footer p{
+  background: var(--primary);
+}
