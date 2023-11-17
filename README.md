@@ -29,7 +29,9 @@ Any environment configuration steps.
 
 ## Architecture
 
-Describe how the project is structured.
+- <https://nivo.rocks>
+- <https://mui.com/material-ui/getting-started/>
+- <https://fullcalendar.io/docs/react>
 
 ### Languages & tools
 
