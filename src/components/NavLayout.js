@@ -13,10 +13,9 @@ class NavLayout extends React.Component {
             <h1>tekDash</h1>
             {this.props.auth0.isAuthenticated ? (
                 <>
+                <NavLink to="logout">Logout</NavLink>
                 <NavLink to="dashboard">Dash Board</NavLink>
                 <NavLink to="profile">Profile</NavLink>
-                
-                <NavLink to="logout">Logout</NavLink>
                 </>
               ) : (
                 <NavLink to="login">Login</NavLink>
