@@ -8,8 +8,7 @@ import { createTheme } from "@mui/material/styles";
 // #db4f4a
 // #6870fa
 export const tokens = (mode) => ({
-  ...createContext(
-    mode === "dark"
+  ...(mode === "dark"
       ? {
           grey: {
             100: "#e0e0e0",
@@ -135,8 +134,7 @@ export const themeSettings = (mode) => {
   return {
     palette: {
       mode: mode,
-      ...colors(
-        mode === "dark"
+      ...(mode === "dark"
           ? {
               primary: {
                 main: colors.primary[500],

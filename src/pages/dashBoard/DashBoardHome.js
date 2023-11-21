@@ -4,7 +4,14 @@
 // import { CssBaseline, ThemeProvider } from "@mui/material";
 
 // class DashBoardHome extends Component {
-//   const [theme, colorMode] = useMode();
+
+//   getTheme = () => {
+//     const [theme, colorMode] = useMode();
+//   }
+
+//  ComponentDidMount = () => {
+//   this.getTheme();
+//  }
 
 //   render() {
 //     return (
@@ -21,26 +28,24 @@
 
 // export default withAuth0(DashBoardHome);
 
-
-
 import { withAuth0 } from "@auth0/auth0-react";
 import { ColorModeContext, useMode } from "../../theme.js";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
-function DashBoardHome (){
+function DashBoardHome() {
   const [theme, colorMode] = useMode();
 
- 
-    return (
-      <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
-          <section className="app">
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <section className="app">
+          <main className="content">
             <h1>Secret Cats!</h1>
-          </section>
-        </ThemeProvider>
-      </ColorModeContext.Provider>
-    );
-  }
-
+          </main>
+        </section>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+  );
+}
 
 export default withAuth0(DashBoardHome);
