@@ -38,6 +38,8 @@ Any environment configuration steps.
 Explain what tools are used.
 
 - cmd + d and click until all capture to edit at once
+- Sort Lines by Selection
+- Tailwind Shades
 
 ## Change Log
 
