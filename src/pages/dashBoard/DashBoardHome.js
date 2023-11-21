@@ -31,6 +31,7 @@
 import { withAuth0 } from "@auth0/auth0-react";
 import { ColorModeContext, useMode } from "../../theme.js";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import TopBar from '../controlBars/TopBar.js';
 
 function DashBoardHome() {
   const [theme, colorMode] = useMode();
@@ -40,6 +41,7 @@ function DashBoardHome() {
       <ThemeProvider theme={theme}>
         <section className="app">
           <main className="content">
+          <TopBar />
             <h1>Secret Cats!</h1>
           </main>
         </section>
