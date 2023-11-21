@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 // import axios from "axios";
 
-class DashBoard extends Component {
+class DashBoardHome extends Component {
  
 
 
@@ -17,4 +17,4 @@ class DashBoard extends Component {
   }
 }
 
-export default withAuth0(DashBoard);
+export default withAuth0(DashBoardHome);
