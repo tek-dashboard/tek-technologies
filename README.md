@@ -35,11 +35,12 @@ Any environment configuration steps.
 
 ### Languages & tools
 
-Explain what tools are used.
+Explain what tools are used and learned throughout the build of this project:
 
-- cmd + d and click until all capture to edit at once
+- *cmd + d* and click until all capture to edit at once
 - Sort Lines by Selection
 - Tailwind Shades
+- *option + cmd* and then arrow down plus shift arrow back highlights column of text to be highlighted and copied.
 
 ## Change Log
 
