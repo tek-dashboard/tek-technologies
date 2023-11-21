@@ -30,7 +30,7 @@
 
 import { withAuth0 } from "@auth0/auth0-react";
 import { ColorModeContext, useMode } from "../../theme.js";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
 
 function DashBoardHome() {
