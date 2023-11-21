@@ -87,7 +87,7 @@ nav  a {
 }
 
 main section {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background: var(--secondary);
   border: 5px solid #dd6e42;
