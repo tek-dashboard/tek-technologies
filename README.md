@@ -35,7 +35,7 @@ Any environment configuration steps.
 
 ### Languages & tools
 
-Explain what tools are used.
+Explain what tools are used and learned throughout the build of this project:
 
 - *cmd + d* and click until all capture to edit at once
 - Sort Lines by Selection
