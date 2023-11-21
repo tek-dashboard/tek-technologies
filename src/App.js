@@ -3,7 +3,7 @@ import NavLayout from "./components/NavLayout";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
-import DashBoard from "./pages/DashBoard";
+import DashBoard from "./pages/dashBoard/DashBoardHome";
 import HomePage from "./pages/HomePage";
 
 import {
