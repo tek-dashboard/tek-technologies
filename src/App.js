@@ -5,6 +5,7 @@ import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import DashBoard from "./pages/dashBoard/DashBoardHome";
 import HomePage from "./pages/HomePage";
+import './css/dashBoardHome.css';
 
 import {
   createBrowserRouter,

@@ -30,8 +30,9 @@
 
 import { withAuth0 } from "@auth0/auth0-react";
 import { ColorModeContext, useMode } from "../../theme.js";
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
+
 
 function DashBoardHome() {
   const [theme, colorMode] = useMode();
@@ -39,6 +40,7 @@ function DashBoardHome() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
+      <CssBaseline />
         <section className="app">
           <main className="content">
           <TopBar />

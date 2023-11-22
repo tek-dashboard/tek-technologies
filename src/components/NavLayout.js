@@ -29,9 +29,9 @@ class NavLayout extends React.Component {
 
 
 
-        <main>
+        
           <Outlet />
-        </main>
+       
       </section>
     );
   }

@@ -9,10 +9,7 @@ body {
   font-family: "Poppins";
   background: var(--secondary);
 }
-* {
-  color: #fff;
-  /* margin: 0; */
-}
+
 p {
   margin: 20px 0;
 }
@@ -53,7 +50,7 @@ header nav a.active {
 
 /* page content */
 main {
-  background: var(--primary);
+  /* background: var(--primary); */
   margin: 0 auto;
 }
 
@@ -86,12 +83,12 @@ nav  a {
   border-radius: 4px;
 }
 
-main section {
+/* main section {
   width: 100%;
   margin: 0 auto;
   background: var(--secondary);
   border: 5px solid #dd6e42;
-}
+} */
 
 .profile-margin {
   margin-top: 20px;
@@ -107,4 +104,41 @@ footer  {
 
 footer p{
   background: var(--primary);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.app {
+  display: flex;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
