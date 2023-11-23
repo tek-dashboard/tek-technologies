@@ -2,8 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Auth0Provider } from '@auth0/auth0-react';
 import App from './App.js';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = createRoot(document.getElementById('root'));
 

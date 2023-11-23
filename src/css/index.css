@@ -1,18 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import-normalize;
 
-:root {
-  --primary: #4f6d7a;
-  --secondary: #c0d6df;
-}
-body {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app,
+.content {
   margin: 0;
-  font-family: "Poppins";
-  background: var(--secondary);
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  
 }
-* {
-  color: #fff;
-  /* margin: 0; */
+
+.app {
+  display: flex;
+  position: relative;
 }
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+} */
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 p {
   margin: 20px 0;
 }
@@ -21,13 +46,12 @@ button {
   padding: 8px;
   border-radius: 4px;
   color: white;
-  background: var(--primary);
+  background: #4f6d7a;
   cursor: pointer;
 }
 
 header {
-  margin-bottom: 30px;
- 
+  margin-bottom: 10px;
 }
 /* navbar */
 header nav {
@@ -36,75 +60,64 @@ header nav {
   gap: 16px;
   flex: end;
   margin: 0 auto;
-  background: var(--primary);
+  background: hsl(198, 21%, 39%);
+  /* background: #1db5f5; */
 }
 header nav h1 {
   margin-right: auto;
-  border-bottom: 3px solid var(--primary);
 }
 header nav a {
   text-decoration: none;
   border-radius: 4px;
 }
 header nav a.active {
-  background: var(--secondary);
-  color: var(--primary) !important;
+  background: #c0d6df;
+  color: #4f6d7a !important;
 }
 
 /* page content */
-main {
-  background: var(--primary);
-  margin: 0 auto;
-}
 
-/* help layout */
-.help-page nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-nav  a {
+nav a {
   border: 5px solid white;
   padding: 10px;
   border-radius: 4px;
   text-decoration: none;
   color: whitesmoke !important;
 }
- nav a:hover {
+nav a:hover {
   border-color: #e8dab2;
 }
- nav a:active {
+nav a:active {
   border-color: #dd6e42;
 }
-/* faq */
+
 .login-button {
-  border: 5px solid white;
+  border: 5px solid #1db5f5;
   margin-right: 60px;
   margin: 20px 0px 20px 20px;
-  background: var(--primary);
+  background: #c0d6df;
   border-radius: 4px;
-}
-
-main section {
-  width: 100%;
-  margin: 0 auto;
-  background: var(--secondary);
-  border: 5px solid #dd6e42;
 }
 
 .profile-margin {
   margin-top: 20px;
 }
 
-footer  {
-  background: var(--primary);
-  bottom:0;
-  right:0;
-  left:0;
-  position: fixed; 
+footer {
+  background: #4f6d7a;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
 }
 
-footer p{
-  background: var(--primary);
+footer p {
+  background: #4f6d7a;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
