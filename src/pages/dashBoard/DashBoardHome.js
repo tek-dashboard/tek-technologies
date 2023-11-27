@@ -32,6 +32,18 @@ import { withAuth0 } from "@auth0/auth0-react";
 import { ColorModeContext, useMode } from "../../theme.js";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
+import Sidebar from "./scenes/global/Sidebar";
+import Dashboard from "./scenes/dashboard";
+import Team from "./scenes/team";
+import Invoices from "./scenes/invoices";
+import Contacts from "./scenes/contacts";
+import Bar from "./scenes/bar";
+import Form from "./scenes/form";
+import Line from "./scenes/line";
+import Pie from "./scenes/pie";
+import FAQ from "./scenes/faq";
+import Geography from "./scenes/geography";
+import Calendar from "./scenes/calendar/calendar";
 
 
 function DashBoardHome() {
