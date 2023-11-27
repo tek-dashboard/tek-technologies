@@ -3,7 +3,7 @@ import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import { tokens } from "../../theme";
+import { tokens } from "../../theme.js";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -21,7 +21,24 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 
 const SideBar = () => {
-  return <div>Side Bar</div>
+
+  const theme = useTheme();
+  const colors = tokens(theme.pallette.mode);
+  const [isCollapsed, setIsCollapsed] = useState('Dashboard')
+
+  return 
+  <Box
+  sx={{
+    '& .pro-sidebar-inner': {background: `${colors.primary[400]} !important`},
+    '& .pro-sidebar-wrapper': {backgroundColor: 'transparent !important'},
+    '& .pro-sidebar-item': {background: `${colors.primary[400]} !important`},
+    '& .pro-inner-item:hover': {color: '#1db5f5 !important'},
+    '& .pro-inner-item:active': {color: '#868dfb !important'},
+
+  }}
+  > 
+  </Box>
+
 }
 
 export default SideBar;
