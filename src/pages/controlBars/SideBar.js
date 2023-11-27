@@ -24,7 +24,7 @@ const SideBar = () => {
 
   const theme = useTheme();
   const colors = tokens(theme.pallette.mode);
-  const [isCollapsed, setIsCollapsed] = useState('Dashboard')
+  const [isCollapsed, setIsCollapsed] = useState('Dashboard');
 
   return 
   <Box

@@ -14,7 +14,7 @@ class NavLayout extends React.Component {
             {this.props.auth0.isAuthenticated ? (
                 <>
                 <NavLink to="logout">Logout</NavLink>
-                <NavLink to="dashboard">Dash Board</NavLink>
+                <NavLink to="dashboardhome">Dash Board</NavLink>
                 <NavLink to="profile">Profile</NavLink>
                 </>
               ) : (

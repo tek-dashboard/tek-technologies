@@ -3,7 +3,7 @@ import NavLayout from "./components/NavLayout";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
-import DashBoard from "./pages/dashBoard/DashBoardHome";
+import DashBoardHome from "./pages/dashBoard/DashBoardHome";
 import HomePage from "./pages/HomePage";
 // import Team from "./pages/team";
 // import Invoices from "./pages/invoices";
@@ -35,7 +35,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="logout" element={<Logout />} />
 
-      <Route path="dashboard" element={<DashBoard />}>
+      <Route path="dashboardhome" element={<DashBoardHome />}>
         {/* <Route path="/team" element={<Team />} /> */}
         {/* <Route path="/contacts" element={<Contacts />} /> */}
         {/* <Route path="/invoices" element={<Invoices />} /> */}
