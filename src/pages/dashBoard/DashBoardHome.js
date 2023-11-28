@@ -36,7 +36,6 @@ import TopBar from '../controlBars/TopBar.js';
 import Sidebar from "../controlBars/SideBar.js";
 
 
-
 function DashBoardHome() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
