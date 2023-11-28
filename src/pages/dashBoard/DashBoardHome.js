@@ -1,5 +1,3 @@
-
-
 import { withAuth0 } from "@auth0/auth0-react";
 import { useState } from 'react';
 import { ColorModeContext, useMode } from "../../theme.js";
