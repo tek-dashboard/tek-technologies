@@ -29,24 +29,26 @@
 // export default withAuth0(DashBoardHome);
 
 import { withAuth0 } from "@auth0/auth0-react";
+import { useState } from 'react';
 import { ColorModeContext, useMode } from "../../theme.js";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
-// import Sidebar from "../controlBars/SideBar.js";
+import Sidebar from "../controlBars/SideBar.js";
 
 
 function DashBoardHome() {
   const [theme, colorMode] = useMode();
-
+  const [isSidebar, setIsSidebar] = useState(true);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
       <CssBaseline />
         <section className="app">
-        {/* <Sidebar isSidebar={isSidebar} /> */}
+        <Sidebar isSidebar={isSidebar} />
           <main className="content">
-          <TopBar />
+          <TopBar setIsSidebar={setIsSidebar} />
+        
          
           
           
