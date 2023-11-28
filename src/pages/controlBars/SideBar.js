@@ -17,9 +17,21 @@ import { tokens } from "../../theme.js";
 // import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 // import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
-const Item = ({}) =>{
+const Item = ({title, to, icon, selected, setSelected }) =>{
+  const theme = useTheme();
+  const colors = tokens(theme.pallet.mode);
   return (
-    <MenuItem> </MenuItem>
+    <MenuItem 
+     active={selected === title}
+     style={{
+      color: colors.grey[100],
+     }}
+     onClick={() => setSelected(title)}
+     icon={icon}
+    > 
+    <Typography>{title}</Typography>
+    <link to={to} />
+    </MenuItem>
   );
 }
 const SideBar = () => {
