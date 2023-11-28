@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@auth0/auth0-react": "^2.2.3",
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fullcalendar/core": "^6.1.9",
@@ -27,7 +27,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
-    "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-pro-sidebar": "^0.7.1",
     "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
