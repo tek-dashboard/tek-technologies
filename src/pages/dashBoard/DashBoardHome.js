@@ -36,6 +36,7 @@ import TopBar from '../controlBars/TopBar.js';
 import Sidebar from "../controlBars/SideBar.js";
 
 
+
 function DashBoardHome() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -48,13 +49,11 @@ function DashBoardHome() {
         <Sidebar isSidebar={isSidebar} />
           <main className="content">
           <TopBar setIsSidebar={setIsSidebar} />
-        
-         
-          
-          
-       
             <h1>Secret Cats!</h1>
+            
+            
           </main>
+         
         </section>
       </ThemeProvider>
     </ColorModeContext.Provider>

@@ -5,6 +5,7 @@ import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import DashBoardHome from "./pages/dashBoard/DashBoardHome";
 import HomePage from "./pages/HomePage";
+import DashBoard  from "./pages/dashBoard/DashBoard";
 // import Team from "./pages/team";
 // import Invoices from "./pages/invoices";
 // import Contacts from "./pages/contacts";
@@ -34,8 +35,11 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="login" element={<Login />} />
       <Route path="logout" element={<Logout />} />
-
+       {/* DashBoardHome is the demo App.js 
+          DashBoardHome has the side bar and top bar
+        */}
       <Route path="dashboardhome" element={<DashBoardHome />}>
+      <Route path="dashboard" element={<DashBoard />} />
         {/* <Route path="/team" element={<Team />} /> */}
         {/* <Route path="/contacts" element={<Contacts />} /> */}
         {/* <Route path="/invoices" element={<Invoices />} /> */}
