@@ -82,12 +82,12 @@ const SideBar = () => {
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
-                <img 
+                <img
                   alt="profile-user"
                   width="100px"
                   height="100px"
                   src={`../../assets/CRAIGB.jpg`}
-                  style={{cursor: "pointer",borderRadius: "50%"}}
+                  style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
               <Box textAlign="center">
@@ -95,11 +95,11 @@ const SideBar = () => {
                   variant="h2"
                   colors={colors.grey[100]}
                   fontWeight="bold"
-                  sx={{m: "10px 0 0 0"}}
+                  sx={{ m: "10px 0 0 0" }}
                 >
-                tek admin name
+                  tek admin name
                 </Typography>
-                <Typography variant='h5' color={colors.greenAccent[500]}>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
                   VP AUTH LEVEL
                 </Typography>
               </Box>
@@ -112,14 +112,25 @@ const SideBar = () => {
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-             />
+            />
             <Typography
-             variant="h6"
-             color={colors.grey[300]}
-             sx={{m: "15px 0 5px 20px"}}
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
             >
               dotData
             </Typography>
+            <Item />
+            <Item />
+            <Item />
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Pages
+            </Typography>
+            <Item />
             <Item />
             <Item />
             <Typography></Typography>
