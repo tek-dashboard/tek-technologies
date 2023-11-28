@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Icon, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme.js";
-// import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 // import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 // import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 // import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
@@ -38,7 +38,7 @@ const SideBar = () => {
   const theme = useTheme();
   const colors = tokens(theme.pallette.mode);
   const [isCollapsed, setIsCollapsed] = useState("false");
-  // const [selected, setSelected] = useState("Dashboard");
+  const [selected, setSelected] = useState("Dashboard");
 
   return (
     <Box
@@ -105,9 +105,21 @@ const SideBar = () => {
               </Box>
             </Box>
           )}
-          <Box>
-            <Item />
-            <Typography></Typography>
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+            <Item
+              title="Dashboard"
+              to="dashboardhome"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+             />
+            <Typography
+             variant="h6"
+             color={colors.grey[300]}
+             sx={{m: "15px 0 5px 20px"}}
+            >
+              dotData
+            </Typography>
             <Item />
             <Item />
             <Typography></Typography>
