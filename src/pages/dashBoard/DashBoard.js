@@ -16,7 +16,7 @@ import Header from "../../components/Header";
 
 const DashBoard = () => {
   const theme = useTheme();
-  const colors = tokens(theme.pallet.mode);
+  const colors = tokens(theme.palette.mode);
   return(
     <Box m="20px">
       {/* HEADER */}
