@@ -48,7 +48,7 @@ function DashBoardHome() {
         <Sidebar isSidebar={isSidebar} />
           <main className="content">
           <TopBar setIsSidebar={setIsSidebar} />
-          <TopBar />
+        
          
           
           
