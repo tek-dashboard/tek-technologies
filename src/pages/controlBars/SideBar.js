@@ -65,7 +65,18 @@ const SideBar = () => {
           }}
         >
           {!isCollapsed && (
-            <Box>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              ml="15px"
+            >
+            <Typography> 
+            ADMIN dash
+            </Typography>
+            <IconButton onClick={()=> setIsCollapsed(!isCollapsed)}>
+              <MenuOutlinedIcon />
+            </IconButton>
             <Box>
 
             </Box>
