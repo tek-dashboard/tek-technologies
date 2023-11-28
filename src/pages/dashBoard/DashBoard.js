@@ -18,7 +18,7 @@ const DashBoard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return(
-    <Box m="">
+    <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to tekDash" />
@@ -30,7 +30,7 @@ const DashBoard = () => {
               color: colors.grey[100],
               fontSize: "14px",
               fontWeight: "bold",
-              margin : "0px 50px 0px 0px",
+              margin : "0px 30px 0px 0px",
               padding: "10px 20px",
             }}
           >
