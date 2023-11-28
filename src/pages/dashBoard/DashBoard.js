@@ -1,5 +1,5 @@
 
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Button,  useTheme } from "@mui/material"; //IconButton, Typography,
 import { tokens } from "../../theme";
 // import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
@@ -25,7 +25,7 @@ const DashBoard = () => {
 
         <Box>
           <Button
-            sx={{
+            sx= {{
               backgroundColor: colors.blueAccent[700],
               color: colors.grey[100],
               fontSize: "14px",
