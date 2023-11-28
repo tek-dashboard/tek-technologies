@@ -14,7 +14,7 @@ import { tokens } from "../../theme.js";
 // import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 // import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 // import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-// import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 // import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 const Item = ({title, to, icon, selected, setSelected }) =>{
@@ -54,17 +54,26 @@ const SideBar = () => {
         "& .pro-inner-item:active": { color: "#868dfb !important" },
       }}
     >
-      <ProSidebar> 
-      <Menu>
-        <MenuItem>
-          {<Box>
+      <ProSidebar collapsed={isCollapsed}> 
+      <Menu iconShape="square">
+        <MenuItem
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+          style={{
+            margin: "10px 0 20px 0",
+            color: colors.grey[100],
+          }}
+        >
+          {!isCollapsed && (
+            <Box>
             <Box>
 
             </Box>
             <Box>
               
             </Box>
-          </Box>}
+          </Box>
+          )}
           <Box>
             <Item />
             <Typography></Typography>
