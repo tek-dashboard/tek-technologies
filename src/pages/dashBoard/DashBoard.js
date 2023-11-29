@@ -39,6 +39,14 @@ const DashBoard = () => {
           </Button>
         </Box>
       </Box>
+          {/* add grid with charts  */}
+          
+
+
+
+
+
+
     </Box>
   )
 }
