@@ -7,7 +7,7 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
-// import LineChart from "../../components/LineChart";
+import LineChart from "../../components/LineChart";
 // import GeographyChart from "../../components/GeographyChart";
 // import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox.js";
@@ -158,14 +158,15 @@ const DashBoard = () => {
                   sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
                 />
               </IconButton>
-
             </Box>
           </Box>
-          {/*close flex box styles for row 2*/}
-        </Box>{" "}
-        {/* close row 2  grid */}
-      </Box>
-      {/* closes grid style box */}
+          <Box height="250px" m="-20px 0 0 0">
+            <LineChart isDashboard={true} />
+          </Box>
+
+          
+        </Box>{/* close row 2  grid */}
+      </Box> {/* closes grid style box */}
     </Box>
   );
 };
