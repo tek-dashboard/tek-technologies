@@ -1,4 +1,4 @@
-import { Box, Button, IconButton,Typography, useTheme } from "@mui/material"; 
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
@@ -153,7 +153,7 @@ const DashBoard = () => {
               </Typography>
             </Box>
             <Box>
-            <IconButton>
+              <IconButton>
                 <DownloadOutlinedIcon
                   sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
                 />
@@ -170,7 +170,7 @@ const DashBoard = () => {
           backgroundColor={colors.primary[400]}
           overflow="auto"
         >
-        <Box
+          <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
@@ -213,12 +213,10 @@ const DashBoard = () => {
               </Box>
             </Box>
           ))}
-
-        </Box>
-
-
-        {/* </Box>close row 2  grid */}
-      </Box> {/* closes grid style box */}
+        </Box> {/* close row 2  grid */}
+       
+      </Box>{/* closes grid style box */}
+      
     </Box>
   );
 };
