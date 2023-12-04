@@ -16,7 +16,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import userPic from '../../assests/CRAIGB.jpg'
+import userPic from '../../assets/CRAIGB.jpg'
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
