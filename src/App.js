@@ -5,8 +5,8 @@ import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import DashBoardHome from "./pages/dashBoard/DashBoardHome";
 import HomePage from "./pages/HomePage";
-import DashBoard  from "./pages/dashBoard/DashBoard";
-import Team from "./pages/sideBar/Team";
+import DashBoard from "./pages/dashBoard/DashBoard";
+import Team from "./pages/dashBoard/Team";
 // import Invoices from "./pages/invoices";
 // import Contacts from "./pages/contacts";
 // import Bar from "./pages/bar";
@@ -16,7 +16,6 @@ import Team from "./pages/sideBar/Team";
 // import FAQ from "./pages/faq";
 // import Geography from "./pages/geography";
 // import Calendar from "./pages/calendar/calendar";
-
 
 import {
   createBrowserRouter,
@@ -32,12 +31,12 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="login" element={<Login />} />
       <Route path="logout" element={<Logout />} />
-       {/* DashBoardHome is the demo App.js 
+      {/* DashBoardHome is the demo App.js 
           DashBoardHome has the side bar and top bar
         */}
       <Route path="dashboardhome" element={<DashBoardHome />}>
-      <Route path="dashboard" element={<DashBoard />} />
-        <Route path="/team" element={<Team />} />
+        <Route path="dashboard" element={<DashBoard />} />
+        <Route path="team" element={<Team />} />
         {/* <Route path="/contacts" element={<Contacts />} /> */}
         {/* <Route path="/invoices" element={<Invoices />} /> */}
         {/* <Route path="/form" element={<Form />} /> */}
@@ -57,7 +56,6 @@ class App extends React.Component {
     return (
       <>
         <RouterProvider router={router} />
-       
       </>
     );
   }
