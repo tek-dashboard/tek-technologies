@@ -4,8 +4,6 @@ import { ColorModeContext, useMode } from "../../theme.js";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
 import Sidebar from "../controlBars/SideBar.js";
-import DashBoard from "../dashBoard/DashBoard.js";
-// import Team from '../dashBoard/Team.js';
 import {  Outlet } from 'react-router-dom';
 
 

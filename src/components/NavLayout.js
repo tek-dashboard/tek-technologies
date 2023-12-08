@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { withAuth0 } from "@auth0/auth0-react";
-import DashBoard from '../pages/dashBoard/DashBoard';
 
 
 class NavLayout extends React.Component {
