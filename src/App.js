@@ -36,7 +36,6 @@ const router = createBrowserRouter(
         */}
       <Route path="dashboardhome" element={<DashBoardHome />}>
         <Route index element={<DashBoard />} />
-        {/* <Route path="dashboard" element={<DashBoard />} /> */}
         <Route path="team" element={<Team />} />
         {/* <Route path="contacts" element={<Contacts />} /> */}
         {/* <Route path="invoices" element={<Invoices />} /> */}
