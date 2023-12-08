@@ -17,6 +17,7 @@ const DashBoard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
+    <>
     <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -280,6 +281,10 @@ const DashBoard = () => {
       </Box>{/* closes grid style box */}
       
     </Box>
+   
+    
+
+    </>
   );
 };
 
