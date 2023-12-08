@@ -5,7 +5,8 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
 import Sidebar from "../controlBars/SideBar.js";
 import DashBoard from "../dashBoard/DashBoard.js";
-import Team from './Team.js'
+// import Team from './Team.js'
+
 
 function DashBoardHome() {
   const [theme, colorMode] = useMode();
@@ -21,8 +22,8 @@ function DashBoardHome() {
           <TopBar setIsSidebar={setIsSidebar} />
             {/* <h1>Secret Cats!</h1> */}
             
-            <Team />
-            
+            <DashBoard />
+            {/* <Team /> */}
             
           </main>
          
