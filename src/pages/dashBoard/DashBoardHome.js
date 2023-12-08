@@ -5,7 +5,8 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from '../controlBars/TopBar.js';
 import Sidebar from "../controlBars/SideBar.js";
 import DashBoard from "../dashBoard/DashBoard.js";
-// import Team from './Team.js'
+// import Team from '../dashBoard/Team.js';
+import {  Outlet } from 'react-router-dom';
 
 
 function DashBoardHome() {
@@ -22,9 +23,10 @@ function DashBoardHome() {
           <TopBar setIsSidebar={setIsSidebar} />
             {/* <h1>Secret Cats!</h1> */}
             
-            <DashBoard />
+        
             {/* <Team /> */}
-            
+           
+            <Outlet />
           </main>
          
         </section>
