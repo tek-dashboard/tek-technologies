@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 import DashBoard from "./pages/dashBoard/DashBoard";
 import Team from "./pages/dashBoard/Team";
 // import Invoices from "./pages/invoices";
-import Contacts from "./components/Contact.js";
+import Contacts from "./components/Contacts";
 // import Bar from "./pages/bar";
 // import Form from "./pages/form";
 // import Line from "./pages/line";
