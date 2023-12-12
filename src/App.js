@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 import DashBoard from "./pages/dashBoard/DashBoard";
 import Team from "./pages/dashBoard/Team";
 // import Invoices from "./pages/invoices";
-// import Contacts from "./pages/contacts";
+import Contacts from "./components/Contact.js";
 // import Bar from "./pages/bar";
 // import Form from "./pages/form";
 // import Line from "./pages/line";
@@ -37,7 +37,7 @@ const router = createBrowserRouter(
       <Route path="dashboardhome" element={<DashBoardHome />}>
         <Route index element={<DashBoard />} />
         <Route path="team" element={<Team />} />
-        {/* <Route path="contacts" element={<Contacts />} /> */}
+        <Route path="contacts" element={<Contacts />} />
         {/* <Route path="invoices" element={<Invoices />} /> */}
         {/* <Route path="form" element={<Form />} /> */}
         {/* <Route path="bar" element={<Bar />} /> */}
@@ -46,7 +46,6 @@ const router = createBrowserRouter(
         {/* <Route path="faq" element={<FAQ />} /> */}
         {/* <Route path="calendar" element={<Calendar />} /> */}
         {/* <Route path="geography" element={<Geography />} /> */}
-     
       </Route>
     </Route>
   )
