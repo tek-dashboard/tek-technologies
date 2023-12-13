@@ -15,7 +15,7 @@ import Bar from "./components/Bar";
 import Line from "./components/Line.js";
 import Pie from "./components/Pie.js";
 import FAQ from "./components/Faq.js";
-import Geography from "./components/GeographyChart.js";
+import Geography from "./components/Geography.js";
 
 
 import {
