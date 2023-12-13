@@ -11,7 +11,7 @@ import Invoices from "./components/Invoices";
 import Contacts from "./components/Contacts";
 import Form from "./components/Form";
 import Calendar from "./components/Calendar";
-// import Bar from "./pages/bar";
+import Bar from "./components/Bar";
 // import Line from "./pages/line";
 // import Pie from "./pages/pie";
 // import FAQ from "./pages/faq";
@@ -42,7 +42,7 @@ const router = createBrowserRouter(
         <Route path="invoices" element={<Invoices />} />
         <Route path="form" element={<Form />} />
         <Route path="calendar" element={<Calendar />} />
-          {/* <Route path="bar" element={<Bar />} /> */}
+        <Route path="bar" element={<Bar />} />
         {/* <Route path="pie" element={<Pie />} /> */}
         {/* <Route path="line" element={<Line />} /> */}
         {/* <Route path="faq" element={<FAQ />} /> */}
