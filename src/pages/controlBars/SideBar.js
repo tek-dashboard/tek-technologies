@@ -187,21 +187,21 @@ const SideBar = () => {
             />
             <Item
               title="Pie Chart"
-              to="/pie"
+              to="pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Line Chart"
-              to="/line"
+              to="line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Geography Chart"
-              to="/geography"
+              to="geography"
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
