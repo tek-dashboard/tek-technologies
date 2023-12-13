@@ -12,7 +12,7 @@ import Contacts from "./components/Contacts";
 import Form from "./components/Form";
 import Calendar from "./components/Calendar";
 import Bar from "./components/Bar";
-// import Line from "./pages/line";
+import Line from "./components/Line.js";
 import Pie from "./components/Pie.js";
 import FAQ from "./components/Faq.js";
 // import Geography from "./pages/geography";
@@ -44,7 +44,7 @@ const router = createBrowserRouter(
         <Route path="calendar" element={<Calendar />} />
         <Route path="bar" element={<Bar />} />
         <Route path="pie" element={<Pie />} />
-        {/* <Route path="line" element={<Line />} /> */}
+        <Route path="line" element={<Line />} />
         <Route path="faq" element={<FAQ />} />
         {/* <Route path="geography" element={<Geography />} /> */}
       </Route>
