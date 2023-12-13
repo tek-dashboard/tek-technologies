@@ -187,7 +187,7 @@ const SideBar = () => {
             />
             <Item
               title="Pie Chart"
-              to="/pie"
+              to="pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
