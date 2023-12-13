@@ -15,7 +15,7 @@ import Bar from "./components/Bar";
 import Line from "./components/Line.js";
 import Pie from "./components/Pie.js";
 import FAQ from "./components/Faq.js";
-// import Geography from "./pages/geography";
+import Geography from "./components/GeographyChart.js";
 
 
 import {
@@ -46,7 +46,7 @@ const router = createBrowserRouter(
         <Route path="pie" element={<Pie />} />
         <Route path="line" element={<Line />} />
         <Route path="faq" element={<FAQ />} />
-        {/* <Route path="geography" element={<Geography />} /> */}
+        <Route path="geography" element={<Geography />} />
       </Route>
     </Route>
   )
