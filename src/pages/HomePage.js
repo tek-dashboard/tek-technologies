@@ -32,20 +32,20 @@ class Home extends React.Component {
   submitCityHandler = async (event) => {
     event.preventDefault();
    try{
-    let URL = `process.env.REACT_APP_SERVER}&q=${this.state.city}&format=json`;
+    let URL = `${process.env.REACT_APP_SERVER}/getLocation`;
     let cityInfo = await axios.get(URL);
-    let lat = cityInfo.data[0].lat;
-    let lon = cityInfo.data[0].lon;
-    let mapImage = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${cityInfo.data[0].lat},${cityInfo.data[0].lon}&zoom=13&size=1000x1000`;
-    console.log('1. Response object:', cityInfo.data[0]);
-    this.setState({
-      cityData: cityInfo.data[0],
-      lat: lat,
-      lon: lon,
-      mapImage: mapImage,
-      displayError: false,
-    });
-    this.displayWeather(lat, lon);
+    console.log(cityInfo);
+    // let lat = cityInfo.data[0].lat;
+    // let lon = cityInfo.data[0].lon;
+    // let mapImage = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${cityInfo.data[0].lat},${cityInfo.data[0].lon}&zoom=13&size=1000x1000`;
+    // console.log('1. Response object:', cityInfo.data[0]);
+    // this.setState({
+    //   cityData: cityInfo.data[0],
+    //   lat: lat,
+    //   lon: lon,
+    //   mapImage: mapImage,
+    //   displayError: false,
+    // });
   } catch(error) {
     console.log("ERROR.message", error.message);
     this.state({
