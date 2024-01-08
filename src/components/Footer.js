@@ -6,7 +6,7 @@ class Footer extends React.Component {
     return (
       <>
         <footer>
-         
+         <marquee>Tacit and Explicit Knowledge Technologies</marquee>
        
         </footer>
       </>
