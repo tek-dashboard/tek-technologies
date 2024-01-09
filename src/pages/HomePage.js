@@ -32,7 +32,7 @@ class Home extends React.Component {
   submitCityHandler = async (event) => {
     event.preventDefault();
    try{
-    let URL = `${process.env.REACT_APP_SERVER}/getLocation`;
+    let URL = `${process.env.REACT_APP_SERVER}/getLocation?cityNameToSearch=${this.state.city}`;
     let cityInfo = await axios.get(URL);
     console.log(cityInfo);
     // let lat = cityInfo.data[0].lat;
