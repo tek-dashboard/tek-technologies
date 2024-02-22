@@ -5,12 +5,11 @@ import axios from "axios";
 console.log(process.env.REACT_APP_CITY_KEY);
 
 class Home extends React.Component {
-
-
   constructor(props) {
     super(props);
     this.state = {
       city: "",
+      cityToSubmit: "",
       cityData: {},
       lat: "",
       lon: "",
@@ -23,38 +22,36 @@ class Home extends React.Component {
   handleCityInput = (event) => {
     console.log(event.target.value);
     this.setState({
-      city: event.target.value,
+      cityToSubmit: event.target.value,
     });
   };
-
 
   //add getLocationData
   submitCityHandler = async (event) => {
     event.preventDefault();
-   try{
-    let URL = `${process.env.REACT_APP_SERVER}/getLocation?cityNameToSearch=${this.state.city}`;
-    let cityInfo = await axios.get(URL);
-    let cityDataFromServer = cityInfo.data;
-    console.log('JJ',cityDataFromServer);
-    this.setState({
-      cityData: cityInfo,
-      city: cityDataFromServer[0],
-      mapImage: cityDataFromServer[1],
-      lat: cityDataFromServer[2],
-      lon: cityDataFromServer[3],
-      displayError: false,
-    });
-  } catch(error) {
-    console.log("ERROR.message", error.message);
-    this.state({
-      displayError: true,
-      errorMessage: `An error occurred: ${error.response.status}`,
-    });
-  }
-};
-  
+    try {
+      let URL = `${process.env.REACT_APP_SERVER}/getLocation?cityNameToSearch=${this.state.cityToSubmit}`;
+      let cityInfo = await axios.get(URL);
+      let cityDataFromServer = cityInfo.data;
+      console.log("JJ", cityDataFromServer);
+      this.setState({
+        cityData: cityInfo,
+        city: cityDataFromServer[0],
+        mapImage: cityDataFromServer[1],
+        lat: cityDataFromServer[2],
+        lon: cityDataFromServer[3],
+        displayError: false,
+      });
+    } catch (error) {
+      console.log("ERROR.message", error.message);
+      this.state({
+        displayError: true,
+        errorMessage: `An error occurred: ${error.response.status}`,
+      });
+    }
+  };
+
   render() {
-    console.log('asdfasdfwerqwer',this.state.cityData);
     return (
       <>
         <div>WELCOME HOME</div>
@@ -68,7 +65,6 @@ class Home extends React.Component {
         {this.state.error ? (
           <p>{this.state.errorMessage}</p>
         ) : (
-          // <p>{this.state.cityData}</p>
           <>
             <p>{this.state.city}</p>
             <Card className="card" style={{ width: "18rem" }}>
@@ -80,11 +76,11 @@ class Home extends React.Component {
               <Card.Body>
                 <Card.Title>{this.state.cityData.display_name}</Card.Title>
                 <Card.Text>
-                  {this.state.cityData.lat} , {this.state.cityData.lon}
+                  {this.state.lat} , {this.state.lon}
                 </Card.Text>
               </Card.Body>
             </Card>
-            </>
+          </>
         )}
         <Footer />
       </>
