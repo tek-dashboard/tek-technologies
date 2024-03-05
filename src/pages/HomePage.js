@@ -1,7 +1,8 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Card from "react-bootstrap/Card";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
+import MapImage from "../components/MapImage";
 console.log(process.env.REACT_APP_CITY_KEY);
 
 class Home extends React.Component {
@@ -33,7 +34,7 @@ class Home extends React.Component {
       let URL = `${process.env.REACT_APP_SERVER}/getLocation?cityNameToSearch=${this.state.cityToSubmit}`;
       let cityInfo = await axios.get(URL);
       let cityDataFromServer = cityInfo.data;
-      console.log("JJ", cityDataFromServer);
+      // console.log("JJ", cityDataFromServer);
       this.setState({
         cityData: cityInfo,
         city: cityDataFromServer[0],
@@ -54,34 +55,68 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div>WELCOME HOME</div>
-        <form onSubmit={this.submitCityHandler}>
-          <label>
-            Pick a City:
-            <input type="text" onChange={this.handleCityInput} />
-          </label>
-          <button type="submit">Explore!</button>
-        </form>
-        {this.state.error ? (
-          <p>{this.state.errorMessage}</p>
-        ) : (
-          <>
-            <p>{this.state.city}</p>
-            <Card className="card" style={{ width: "18rem" }}>
-              <Card.Img
-                className="cardImage"
-                variant="top"
-                src={this.state.mapImage}
-              />
-              <Card.Body>
-                <Card.Title>{this.state.cityData.display_name}</Card.Title>
-                <Card.Text>
-                  {this.state.lat} , {this.state.lon}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </>
-        )}
+        <Container>
+          <Row style={{ textAlign: "center" }}>
+            <h1>WELCOME HOME</h1>
+            <form onSubmit={this.submitCityHandler}>
+              <label>
+                Pick a City:
+                <input type="text" onChange={this.handleCityInput} />
+              </label>
+              <button type="submit">Explore!</button>
+            </form>
+          </Row>
+
+          <Row>
+            <Col>
+              <Card
+                className="card"
+                style={{
+                  width: "38rem",
+                  height: "28rem",
+                  backgroundColor: "#c0d6df",
+                  marginTop: "2rem"
+                  
+                }}
+              >asdf</Card>
+            </Col>
+            <Col>
+              {this.state.error ? (
+                <p>{this.state.errorMessage}</p>
+              ) : (
+                <>
+                  <Card
+                    className="card"
+                    style={{
+                      width: "38rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem"
+                    }}
+                  >
+                    {this.state.mapImage === "" ? (
+                      ""
+                    ) : (
+                      <MapImage
+                        mapImage={this.state.mapImage}
+                        cityName={this.state.cityData.data[0]}
+                        lat={this.state.lat}
+                        lon={this.state.lon}
+                      />
+                    )}
+                  </Card>
+                </>
+              )}
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>1 of 3</Col>
+            <Col>2 of 3</Col>
+            <Col>3 of 3</Col>
+          </Row>
+        </Container>
+
         <Footer />
       </>
     );
