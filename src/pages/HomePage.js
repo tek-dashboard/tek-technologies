@@ -68,8 +68,17 @@ class Home extends React.Component {
           </Row>
 
           <Row>
-            <Col></Col>
-
+            <Col>
+              <Card
+                className="card"
+                style={{
+                  width: "38rem",
+                  height: "28rem",
+                  backgroundColor: "#c0d6df",
+                  marginTop: "2rem",
+                }}
+              >asdf</Card>
+            </Col>
             <Col>
               {this.state.error ? (
                 <p>{this.state.errorMessage}</p>
@@ -81,16 +90,18 @@ class Home extends React.Component {
                       width: "38rem",
                       height: "28rem",
                       backgroundColor: "#c0d6df",
-                      marginTop: "2rem"
+                      marginTop: "2rem",
                     }}
                   >
-                  { this.state.mapImage === "" ? (""):(
-                    <MapImage
-                      mapImage={this.state.mapImage}
-                      cityName={this.state.cityData.data[0]}
-                      lat={this.state.lat}
-                      lon={this.state.lon}
-                    />
+                    {this.state.mapImage === "" ? (
+                      ""
+                    ) : (
+                      <MapImage
+                        mapImage={this.state.mapImage}
+                        cityName={this.state.cityData.data[0]}
+                        lat={this.state.lat}
+                        lon={this.state.lon}
+                      />
                     )}
                   </Card>
                 </>
