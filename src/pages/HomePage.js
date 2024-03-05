@@ -54,7 +54,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div>WELCOME HOME</div>
+        <h1>WELCOME HOME</h1>
         <form onSubmit={this.submitCityHandler}>
           <label>
             Pick a City:
