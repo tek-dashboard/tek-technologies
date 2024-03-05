@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
-
+import MapImage from "../components/MapImage";
 console.log(process.env.REACT_APP_CITY_KEY);
 
 class Home extends React.Component {
@@ -56,43 +56,42 @@ class Home extends React.Component {
     return (
       <>
         <Container>
-        <Row style={{textAlign: "center"}}>
-        <h1>WELCOME HOME</h1>
-        <form onSubmit={this.submitCityHandler}>
-                <label>
-                  Pick a City:
-                  <input type="text" onChange={this.handleCityInput} />
-                </label>
-                <button type="submit">Explore!</button>
-              </form>
-        </Row>
-         
+          <Row style={{ textAlign: "center" }}>
+            <h1>WELCOME HOME</h1>
+            <form onSubmit={this.submitCityHandler}>
+              <label>
+                Pick a City:
+                <input type="text" onChange={this.handleCityInput} />
+              </label>
+              <button type="submit">Explore!</button>
+            </form>
+          </Row>
+
           <Row>
-            <Col>
-            
-             
-            </Col>
+            <Col></Col>
 
             <Col>
               {this.state.error ? (
                 <p>{this.state.errorMessage}</p>
               ) : (
                 <>
-                  <p>{this.state.city}</p>
-                  <Card className="card" style={{ width: "38rem", height: "28rem" , backgroundColor: "#c0d6df"}}>
-                    <Card.Img
-                      className="cardImage"
-                      variant="top"
-                      src={this.state.mapImage}
+                  <Card
+                    className="card"
+                    style={{
+                      width: "38rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem"
+                    }}
+                  >
+                  { this.state.mapImage === "" ? (""):(
+                    <MapImage
+                      mapImage={this.state.mapImage}
+                      cityName={this.state.cityData.data[0]}
+                      lat={this.state.lat}
+                      lon={this.state.lon}
                     />
-                    <Card.Body>
-                      <Card.Title>
-                        {this.state.cityData.display_name}
-                      </Card.Title>
-                      <Card.Text>
-                        {this.state.lat} , {this.state.lon}
-                      </Card.Text>
-                    </Card.Body>
+                    )}
                   </Card>
                 </>
               )}
