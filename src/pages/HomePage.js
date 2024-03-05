@@ -75,7 +75,8 @@ class Home extends React.Component {
                   width: "38rem",
                   height: "28rem",
                   backgroundColor: "#c0d6df",
-                  marginTop: "2rem",
+                  marginTop: "2rem"
+                  
                 }}
               >asdf</Card>
             </Col>
@@ -90,7 +91,7 @@ class Home extends React.Component {
                       width: "38rem",
                       height: "28rem",
                       backgroundColor: "#c0d6df",
-                      marginTop: "2rem",
+                      marginTop: "2rem"
                     }}
                   >
                     {this.state.mapImage === "" ? (
