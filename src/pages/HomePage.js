@@ -43,6 +43,7 @@ class Home extends React.Component {
         lon: cityDataFromServer[3],
         displayError: false,
       });
+      this.displayWeather(cityDataFromServer[2], cityDataFromServer[3]);
     } catch (error) {
       console.log("ERROR.message", error.message);
       this.state({
@@ -54,6 +55,7 @@ class Home extends React.Component {
 
   displayWeather = async (lat, lon) => {
     try {
+      console.log(lat,lon);
       
     } catch (error) {
       this.setState({
