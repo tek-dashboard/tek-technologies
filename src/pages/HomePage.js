@@ -52,6 +52,39 @@ class Home extends React.Component {
     }
   };
 
+  displayWeather = async (lat, lon) => {
+    try {
+      
+    } catch (error) {
+      this.setState({
+        mapImage: false,
+        displayError: true,
+        errorMessage: `An error occurred: ${error.response.status}`,
+      });
+      
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   render() {
     return (
       <>
