@@ -43,7 +43,8 @@ class Home extends React.Component {
         lon: cityDataFromServer[3],
         displayError: false,
       });
-      this.displayWeather(cityDataFromServer[2], cityDataFromServer[3]);
+
+      this.displayWeather(cityDataFromServer[2], cityDataFromServer[3],cityDataFromServer[0]);
     } catch (error) {
       console.log("ERROR.message", error.message);
       this.state({
@@ -53,19 +54,20 @@ class Home extends React.Component {
     }
   };
 
-  displayWeather = async (lat, lon) => {
+  displayWeather = async (lat, lon, locationName) => {
     try {
-      console.log(lat, lon);
+      console.log(lat, lon,locationName);
       const weatherToDisplay = await axios.get(
-        `${process.env.REACT_APP_SERVER}/weather)`,
+        `${process.env.REACT_APP_SERVER}/weather`,
         {
           params: {
             lat: lat,
             lon: lon,
-            searchQuery: this.state.city,
+            locationName: locationName,
           },
         }
       );
+      console.log("back from server", weatherToDisplay);
     } catch (error) {
       this.setState({
         mapImage: false,
