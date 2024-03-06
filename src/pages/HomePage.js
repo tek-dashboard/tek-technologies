@@ -16,7 +16,7 @@ class Home extends React.Component {
       lon: "",
       mapImage: "",
       displayError: false,
-      errorMessage: "ugh ooo",
+      errorMessage: "error from state attribute",
     };
   }
 
@@ -43,9 +43,38 @@ class Home extends React.Component {
         lon: cityDataFromServer[3],
         displayError: false,
       });
+
+      this.displayWeather(
+        cityDataFromServer[2],
+        cityDataFromServer[3],
+        cityDataFromServer[0]
+      );
     } catch (error) {
       console.log("ERROR.message", error.message);
       this.state({
+        displayError: true,
+        errorMessage: `An error occurred: ${error.response.status}`,
+      });
+    }
+  };
+
+  displayWeather = async (lat, lon, locationName) => {
+    try {
+      console.log(lat, lon, locationName);
+      const weatherToDisplay = await axios.get(
+        `${process.env.REACT_APP_SERVER}/weather`,
+        {
+          params: {
+            lat: lat,
+            lon: lon,
+            locationName: locationName,
+          },
+        }
+      );
+      console.log("back from server", weatherToDisplay);
+    } catch (error) {
+      this.setState({
+        mapImage: false,
         displayError: true,
         errorMessage: `An error occurred: ${error.response.status}`,
       });
@@ -75,10 +104,11 @@ class Home extends React.Component {
                   width: "38rem",
                   height: "28rem",
                   backgroundColor: "#c0d6df",
-                  marginTop: "2rem"
-                  
+                  marginTop: "2rem",
                 }}
-              >asdf</Card>
+              >
+                asdf
+              </Card>
             </Col>
             <Col>
               {this.state.error ? (
@@ -91,7 +121,7 @@ class Home extends React.Component {
                       width: "38rem",
                       height: "28rem",
                       backgroundColor: "#c0d6df",
-                      marginTop: "2rem"
+                      marginTop: "2rem",
                     }}
                   >
                     {this.state.mapImage === "" ? (
