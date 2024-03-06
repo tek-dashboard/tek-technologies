@@ -55,37 +55,25 @@ class Home extends React.Component {
 
   displayWeather = async (lat, lon) => {
     try {
-      console.log(lat,lon);
-      
+      console.log(lat, lon);
+      const weatherToDisplay = await axios.get(
+        `${process.env.REACT_APP_SERVER}/weather)`,
+        {
+          params: {
+            lat: lat,
+            lon: lon,
+            searchQuery: this.state.city,
+          },
+        }
+      );
     } catch (error) {
       this.setState({
         mapImage: false,
         displayError: true,
         errorMessage: `An error occurred: ${error.response.status}`,
       });
-      
     }
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   render() {
     return (
@@ -110,10 +98,11 @@ class Home extends React.Component {
                   width: "38rem",
                   height: "28rem",
                   backgroundColor: "#c0d6df",
-                  marginTop: "2rem"
-                  
+                  marginTop: "2rem",
                 }}
-              >asdf</Card>
+              >
+                asdf
+              </Card>
             </Col>
             <Col>
               {this.state.error ? (
@@ -126,7 +115,7 @@ class Home extends React.Component {
                       width: "38rem",
                       height: "28rem",
                       backgroundColor: "#c0d6df",
-                      marginTop: "2rem"
+                      marginTop: "2rem",
                     }}
                   >
                     {this.state.mapImage === "" ? (
