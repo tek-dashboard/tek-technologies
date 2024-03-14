@@ -120,6 +120,8 @@ class Home extends React.Component {
                   <Card
                     className="card"
                     style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
                       width: "38rem",
                       height: "28rem",
                       backgroundColor: "#c0d6df",
