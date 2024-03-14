@@ -126,6 +126,7 @@ class Home extends React.Component {
                       height: "28rem",
                       backgroundColor: "#c0d6df",
                       marginTop: "2rem",
+                      textAlign: "center"
                     }}
                   >
                     {this.state.mapImage === "" ? (

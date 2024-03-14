@@ -10,7 +10,7 @@ class MapImage extends Component {
         <Card.Img
           className="cardImage"
           variant="top"
-          style={{ width: "32rem", height: "20rem", margin: "0 auto" }}
+          style={{ width: "32rem", height: "20rem", margin: "0 auto",  marginTop: "2rem", }}
           src={this.props.mapImage}
         />
         <Card.Body>
