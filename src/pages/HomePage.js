@@ -60,9 +60,7 @@ class Home extends React.Component {
 
   displayWeather = async (lat, lon, locationName) => {
     try {
-      console.log(lat, lon, locationName);
-      const weatherToDisplay = await axios.get(
-        `${process.env.REACT_APP_SERVER}/weather`,
+      const weatherToDisplay = await axios.get(`${process.env.REACT_APP_SERVER}/weather`,
         {
           params: {
             lat: lat,
@@ -92,7 +90,7 @@ class Home extends React.Component {
                 Pick a City:
                 <input type="text" onChange={this.handleCityInput} />
               </label>
-              <button type="submit">Explore!</button>
+              <button style={{ marginLeft: "50px" }} type="submit">Explore!</button>
             </form>
           </Row>
 
@@ -120,10 +118,13 @@ class Home extends React.Component {
                   <Card
                     className="card"
                     style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
                       width: "38rem",
                       height: "28rem",
                       backgroundColor: "#c0d6df",
                       marginTop: "2rem",
+                      textAlign: "center"
                     }}
                   >
                     {this.state.mapImage === "" ? (
