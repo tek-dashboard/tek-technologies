@@ -84,7 +84,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container fluid>
           <Row style={{ textAlign: "center" }}>
             <h1>WELCOME HOME</h1>
             <form onSubmit={this.submitCityHandler}>
@@ -96,11 +96,13 @@ class Home extends React.Component {
             </form>
           </Row>
 
-          <Row>
+          <Row className="align-middle">
             <Col>
               <Card
                 className="card"
                 style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
                   width: "38rem",
                   height: "28rem",
                   backgroundColor: "#c0d6df",
