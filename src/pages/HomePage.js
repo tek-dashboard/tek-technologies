@@ -115,9 +115,9 @@ class Home extends React.Component {
                   marginTop: "2rem",
                 }}
               >
-                <WeatherDisplay
-                  weatherToDisplay={this.state.weatherToDisplay}
-                />
+                {this.state.weatherToDisplay.map((dayForecast, index) => (
+                  <WeatherDisplay key={index} dayForecast={dayForecast} />
+                ))}
               </Card>
             </Col>
             <Col>

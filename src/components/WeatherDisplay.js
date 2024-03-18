@@ -2,9 +2,15 @@ import React, { Component } from 'react'
 
  class WeatherDisplay extends Component {
   render() {
-    console.log('weather component',this.props.weatherToDisplay);
+    console.log('weather from state',this.props.dayForecast);
+   
+
+
     return (
-      <div>WWeather</div>
+      <>
+       {this.props.dayForecast.forecast}
+       {this.props.dayForecast.time}
+      </>
     )
   }
 }
