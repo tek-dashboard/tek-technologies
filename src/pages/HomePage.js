@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
-console.log(process.env.REACT_APP_CITY_KEY);
+import WeatherDisplay from "../components/WeatherDisplay";
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class Home extends React.Component {
       cityData: {},
       lat: "",
       lon: "",
+      weatherToDisplay: [],
       mapImage: "",
       displayError: false,
       errorMessage: "error from state attribute",
@@ -21,7 +22,6 @@ class Home extends React.Component {
   }
 
   handleCityInput = (event) => {
-    console.log(event.target.value);
     this.setState({
       cityToSubmit: event.target.value,
     });
@@ -44,7 +44,7 @@ class Home extends React.Component {
         displayError: false,
       });
 
-      this.displayWeather(
+      this.getWeather(
         cityDataFromServer[2],
         cityDataFromServer[3],
         cityDataFromServer[0]
@@ -58,9 +58,10 @@ class Home extends React.Component {
     }
   };
 
-  displayWeather = async (lat, lon, locationName) => {
+  getWeather = async (lat, lon, locationName) => {
     try {
-      const weatherToDisplay = await axios.get(`${process.env.REACT_APP_SERVER}/weather`,
+      const weatherToDisplay = await axios.get(
+        `${process.env.REACT_APP_SERVER}/weather`,
         {
           params: {
             lat: lat,
@@ -69,7 +70,11 @@ class Home extends React.Component {
           },
         }
       );
-      console.log("back from server", weatherToDisplay);
+      console.log(weatherToDisplay.data);
+      this.setState({
+        displayError: false,
+        weatherToDisplay: weatherToDisplay.data,
+      });
     } catch (error) {
       this.setState({
         mapImage: false,
@@ -80,6 +85,7 @@ class Home extends React.Component {
   };
 
   render() {
+    console.log("weather data from state", this.state.weatherToDisplay);
     return (
       <>
         <Container fluid>
@@ -90,11 +96,13 @@ class Home extends React.Component {
                 Pick a City:
                 <input type="text" onChange={this.handleCityInput} />
               </label>
-              <button style={{ marginLeft: "50px" }} type="submit">Explore!</button>
+              <button style={{ marginLeft: "50px" }} type="submit">
+                Explore!
+              </button>
             </form>
           </Row>
 
-          <Row className="align-middle">
+          <Row>
             <Col>
               <Card
                 className="card"
@@ -107,7 +115,9 @@ class Home extends React.Component {
                   marginTop: "2rem",
                 }}
               >
-                asdf
+                {this.state.weatherToDisplay.map((dayForecast, index) => (
+                  <WeatherDisplay key={index} dayForecast={dayForecast} />
+                ))}
               </Card>
             </Col>
             <Col>
@@ -124,7 +134,7 @@ class Home extends React.Component {
                       height: "28rem",
                       backgroundColor: "#c0d6df",
                       marginTop: "2rem",
-                      textAlign: "center"
+                      textAlign: "center",
                     }}
                   >
                     {this.state.mapImage === "" ? (
@@ -143,10 +153,51 @@ class Home extends React.Component {
             </Col>
           </Row>
 
-          <Row>
-            <Col>1 of 3</Col>
-            <Col>2 of 3</Col>
-            <Col>3 of 3</Col>
+          <Row> 
+            <Col>
+            <Card
+                    className="card"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      width: "30rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem",
+                      textAlign: "center",
+                    }}
+                  >
+                  1
+                  </Card>
+                  </Col>
+            <Col><Card
+                    className="card"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      width: "30rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem",
+                      textAlign: "center",
+                    }}
+                  >
+                  2
+                  </Card></Col>
+            <Col><Card
+                    className="card"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      width: "30rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem",
+                      textAlign: "center",
+                    }}
+                  >
+                  3
+                  </Card></Col>
           </Row>
         </Container>
 
