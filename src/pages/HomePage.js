@@ -22,7 +22,6 @@ class Home extends React.Component {
   }
 
   handleCityInput = (event) => {
-
     this.setState({
       cityToSubmit: event.target.value,
     });
@@ -61,7 +60,8 @@ class Home extends React.Component {
 
   getWeather = async (lat, lon, locationName) => {
     try {
-      const weatherToDisplay = await axios.get(`${process.env.REACT_APP_SERVER}/weather`,
+      const weatherToDisplay = await axios.get(
+        `${process.env.REACT_APP_SERVER}/weather`,
         {
           params: {
             lat: lat,
@@ -73,9 +73,8 @@ class Home extends React.Component {
       console.log(weatherToDisplay.data);
       this.setState({
         displayError: false,
-        weatherToDisplay: weatherToDisplay.data
+        weatherToDisplay: weatherToDisplay.data,
       });
-
     } catch (error) {
       this.setState({
         mapImage: false,
@@ -86,7 +85,7 @@ class Home extends React.Component {
   };
 
   render() {
-    console.log('weather data from state',this.state.weatherToDisplay);
+    console.log("weather data from state", this.state.weatherToDisplay);
     return (
       <>
         <Container fluid>
@@ -97,7 +96,9 @@ class Home extends React.Component {
                 Pick a City:
                 <input type="text" onChange={this.handleCityInput} />
               </label>
-              <button style={{ marginLeft: "50px" }} type="submit">Explore!</button>
+              <button style={{ marginLeft: "50px" }} type="submit">
+                Explore!
+              </button>
             </form>
           </Row>
 
@@ -114,7 +115,9 @@ class Home extends React.Component {
                   marginTop: "2rem",
                 }}
               >
-                asdf
+                <WeatherDisplay
+                  weatherToDisplay={this.state.weatherToDisplay}
+                />
               </Card>
             </Col>
             <Col>
@@ -131,23 +134,18 @@ class Home extends React.Component {
                       height: "28rem",
                       backgroundColor: "#c0d6df",
                       marginTop: "2rem",
-                      textAlign: "center"
+                      textAlign: "center",
                     }}
                   >
                     {this.state.mapImage === "" ? (
                       ""
                     ) : (
-                      <>
-
-                     
                       <MapImage
                         mapImage={this.state.mapImage}
                         cityName={this.state.cityData.data[0]}
                         lat={this.state.lat}
                         lon={this.state.lon}
                       />
-                      <WeatherDisplay weatherToDisplay={this.state.weatherToDisplay}/>
-                      </>
                     )}
                   </Card>
                 </>
