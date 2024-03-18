@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
-console.log(process.env.REACT_APP_CITY_KEY);
 
 class Home extends React.Component {
   constructor(props) {
@@ -21,7 +20,7 @@ class Home extends React.Component {
   }
 
   handleCityInput = (event) => {
-    console.log(event.target.value);
+
     this.setState({
       cityToSubmit: event.target.value,
     });
