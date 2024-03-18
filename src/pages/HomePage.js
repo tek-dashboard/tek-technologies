@@ -44,7 +44,7 @@ class Home extends React.Component {
         displayError: false,
       });
 
-      this.displayWeather(
+      this.getWeather(
         cityDataFromServer[2],
         cityDataFromServer[3],
         cityDataFromServer[0]
@@ -58,7 +58,7 @@ class Home extends React.Component {
     }
   };
 
-  displayWeather = async (lat, lon, locationName) => {
+  getWeather = async (lat, lon, locationName) => {
     try {
       const weatherToDisplay = await axios.get(`${process.env.REACT_APP_SERVER}/weather`,
         {
