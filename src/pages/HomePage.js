@@ -102,7 +102,7 @@ class Home extends React.Component {
             </form>
           </Row>
 
-          <Row className="align-middle">
+          <Row>
             <Col>
               <Card
                 className="card"
@@ -153,10 +153,51 @@ class Home extends React.Component {
             </Col>
           </Row>
 
-          <Row>
-            <Col>1 of 3</Col>
-            <Col>2 of 3</Col>
-            <Col>3 of 3</Col>
+          <Row> 
+            <Col>
+            <Card
+                    className="card"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      width: "30rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem",
+                      textAlign: "center",
+                    }}
+                  >
+                  1
+                  </Card>
+                  </Col>
+            <Col><Card
+                    className="card"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      width: "30rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem",
+                      textAlign: "center",
+                    }}
+                  >
+                  2
+                  </Card></Col>
+            <Col><Card
+                    className="card"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      width: "30rem",
+                      height: "28rem",
+                      backgroundColor: "#c0d6df",
+                      marginTop: "2rem",
+                      textAlign: "center",
+                    }}
+                  >
+                  3
+                  </Card></Col>
           </Row>
         </Container>
 
