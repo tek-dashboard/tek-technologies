@@ -13,6 +13,7 @@ class Home extends React.Component {
       cityData: {},
       lat: "",
       lon: "",
+      weatherToDisplay: [],
       mapImage: "",
       displayError: false,
       errorMessage: "error from state attribute",
@@ -68,7 +69,13 @@ class Home extends React.Component {
           },
         }
       );
-      console.log("back from server", weatherToDisplay);
+      console.log(weatherToDisplay.data);
+      this.setState({
+        displayError: false,
+        // mapImage: ,
+        weatherToDisplay: weatherToDisplay
+      });
+
     } catch (error) {
       this.setState({
         mapImage: false,
