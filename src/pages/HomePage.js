@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
+import Weather from "../components/Weather"
 
 class Home extends React.Component {
   constructor(props) {
@@ -72,8 +73,7 @@ class Home extends React.Component {
       console.log(weatherToDisplay.data);
       this.setState({
         displayError: false,
-        // mapImage: ,
-        weatherToDisplay: weatherToDisplay
+        weatherToDisplay: weatherToDisplay.data
       });
 
     } catch (error) {
@@ -86,6 +86,7 @@ class Home extends React.Component {
   };
 
   render() {
+    console.log('weather data from state',this.state.weatherToDisplay);
     return (
       <>
         <Container fluid>
@@ -136,12 +137,17 @@ class Home extends React.Component {
                     {this.state.mapImage === "" ? (
                       ""
                     ) : (
+                      <>
+
+                     
                       <MapImage
                         mapImage={this.state.mapImage}
                         cityName={this.state.cityData.data[0]}
                         lat={this.state.lat}
                         lon={this.state.lon}
                       />
+                      <Weather weatherToDisplay={this.state.weatherToDisplay}/>
+                      </>
                     )}
                   </Card>
                 </>
