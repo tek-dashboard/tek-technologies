@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
-import Weather from "../components/Weather"
+import WeatherDisplay from "../components/WeatherDisplay";
 
 class Home extends React.Component {
   constructor(props) {
@@ -146,7 +146,7 @@ class Home extends React.Component {
                         lat={this.state.lat}
                         lon={this.state.lon}
                       />
-                      <Weather weatherToDisplay={this.state.weatherToDisplay}/>
+                      <WeatherDisplay weatherToDisplay={this.state.weatherToDisplay}/>
                       </>
                     )}
                   </Card>
