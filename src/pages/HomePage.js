@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col, Accordion } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
 import WeatherDisplay from "../components/WeatherDisplay";
@@ -116,7 +116,9 @@ class Home extends React.Component {
                 }}
               >
                 {this.state.weatherToDisplay.map((dayForecast, index) => (
+                  <Accordion defaultActiveKey="0">
                   <WeatherDisplay key={index} dayForecast={dayForecast} />
+                  </Accordion>
                 ))}
               </Card>
             </Col>
