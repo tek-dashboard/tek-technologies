@@ -70,7 +70,6 @@ class Home extends React.Component {
           },
         }
       );
-      console.log('new weather items?',weatherToDisplay.data);
       this.setState({
         displayError: false,
         weatherToDisplay: weatherToDisplay.data,
