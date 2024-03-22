@@ -114,12 +114,7 @@ class Home extends React.Component {
                   marginTop: "2rem",
                 }}
               >
-                
-                   
-                    <WeatherDisplay  dayForecast={this.state.weatherToDisplay} />
-                   
-                  {/* ))} */}
-                 
+                <WeatherDisplay dayForecast={this.state.weatherToDisplay} />
               </Card>
             </Col>
             <Col>
