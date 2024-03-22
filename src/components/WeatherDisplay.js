@@ -7,6 +7,8 @@ class WeatherDisplay extends Component {
 
     return (
       <>
+       <Accordion defaultActiveKey={['0']} alwaysOpen>
+                  {/* {this.state.weatherToDisplay.map((dayForecast, index) => ( */}
         {this.props.dayForecast.map((dayForecast, index) => (
           <Accordion.Item eventKey={index}>
             <Accordion.Header>DATE: {dayForecast.time}</Accordion.Header>
@@ -29,6 +31,7 @@ class WeatherDisplay extends Component {
             </Accordion.Body>
           </Accordion.Item>
         ))}
+        </Accordion>
         {/* <Accordion.Item eventKey={this.props.index}>
           <Accordion.Header>
             DATE: {this.props.dayForecast.time}
