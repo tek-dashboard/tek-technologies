@@ -115,17 +115,13 @@ class Home extends React.Component {
                 }}
               >
                 <Accordion
-                style={{
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  marginTop: "2rem",
-                }}
+                  style={{
+                    marginTop: "1.5rem",
+                  }}
                 >
-                {this.state.weatherToDisplay.map((dayForecast, index) => (
-                
-                  <WeatherDisplay key={index} dayForecast={dayForecast} />
-                 
-                ))}
+                  {this.state.weatherToDisplay.map((dayForecast, index) => (
+                    <WeatherDisplay key={index} dayForecast={dayForecast} />
+                  ))}
                 </Accordion>
               </Card>
             </Col>
@@ -162,51 +158,55 @@ class Home extends React.Component {
             </Col>
           </Row>
 
-          <Row> 
+          <Row>
             <Col>
-            <Card
-                    className="card"
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      width: "30rem",
-                      height: "28rem",
-                      backgroundColor: "#c0d6df",
-                      marginTop: "2rem",
-                      textAlign: "center",
-                    }}
-                  >
-                  1
-                  </Card>
-                  </Col>
-            <Col><Card
-                    className="card"
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      width: "30rem",
-                      height: "28rem",
-                      backgroundColor: "#c0d6df",
-                      marginTop: "2rem",
-                      textAlign: "center",
-                    }}
-                  >
-                  2
-                  </Card></Col>
-            <Col><Card
-                    className="card"
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      width: "30rem",
-                      height: "28rem",
-                      backgroundColor: "#c0d6df",
-                      marginTop: "2rem",
-                      textAlign: "center",
-                    }}
-                  >
-                  3
-                  </Card></Col>
+              <Card
+                className="card"
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "30rem",
+                  height: "28rem",
+                  backgroundColor: "#c0d6df",
+                  marginTop: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                1
+              </Card>
+            </Col>
+            <Col>
+              <Card
+                className="card"
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "30rem",
+                  height: "28rem",
+                  backgroundColor: "#c0d6df",
+                  marginTop: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                2
+              </Card>
+            </Col>
+            <Col>
+              <Card
+                className="card"
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "30rem",
+                  height: "28rem",
+                  backgroundColor: "#c0d6df",
+                  marginTop: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                3
+              </Card>
+            </Col>
           </Row>
         </Container>
 
