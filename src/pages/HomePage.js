@@ -114,11 +114,19 @@ class Home extends React.Component {
                   marginTop: "2rem",
                 }}
               >
+                <Accordion
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginTop: "2rem",
+                }}
+                >
                 {this.state.weatherToDisplay.map((dayForecast, index) => (
-                  <Accordion defaultActiveKey="0">
+                
                   <WeatherDisplay key={index} dayForecast={dayForecast} />
-                  </Accordion>
+                 
                 ))}
+                </Accordion>
               </Card>
             </Col>
             <Col>
