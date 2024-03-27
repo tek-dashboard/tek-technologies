@@ -3,8 +3,6 @@ import { Accordion } from "react-bootstrap";
 
 class WeatherDisplay extends Component {
   render() {
-    console.log("weather from state", this.props.dayForecast);
-
     return (
       <>
         <Accordion
@@ -20,15 +18,9 @@ class WeatherDisplay extends Component {
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
-                  // justifyContent: "center",
                 }}
               >
-                <img
-                  src={dayForecast.icon}
-                  // height="50px"
-                  // width="50px"
-                  alt={"weather icon"}
-                />
+                <img src={dayForecast.icon} alt={"weather icon"} />
                 <ul>
                   <li>FORECAST: {dayForecast.forecast}</li>
                   <li>MOON: {dayForecast.moon}</li>

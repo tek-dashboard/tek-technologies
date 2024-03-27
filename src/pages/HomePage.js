@@ -27,14 +27,12 @@ class Home extends React.Component {
     });
   };
 
-  //add getLocationData
   submitCityHandler = async (event) => {
     event.preventDefault();
     try {
       let URL = `${process.env.REACT_APP_SERVER}/getLocation?cityNameToSearch=${this.state.cityToSubmit}`;
       let cityInfo = await axios.get(URL);
       let cityDataFromServer = cityInfo.data;
-      // console.log("JJ", cityDataFromServer);
       this.setState({
         cityData: cityInfo,
         city: cityDataFromServer[0],
@@ -50,7 +48,6 @@ class Home extends React.Component {
         cityDataFromServer[0]
       );
     } catch (error) {
-      console.log("ERROR.message", error.message);
       this.state({
         displayError: true,
         errorMessage: `An error occurred: ${error.response.status}`,
@@ -84,7 +81,6 @@ class Home extends React.Component {
   };
 
   render() {
-    console.log("weather data from state", this.state.weatherToDisplay);
     return (
       <>
         <Container fluid>
