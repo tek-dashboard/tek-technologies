@@ -80,6 +80,18 @@ class Home extends React.Component {
     }
   };
 
+  /**
+ * Build movie call to our server the server is ready to respond. 
+ * handleMovie = async () = {
+    let url = `add url path`;
+    try {
+      do axios call and set state
+    } catch () {
+      handle errors
+    }
+  };
+ */
+
   render() {
     return (
       <>
