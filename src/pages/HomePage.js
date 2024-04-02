@@ -47,6 +47,7 @@ class Home extends React.Component {
         cityDataFromServer[3],
         cityDataFromServer[0]
       );
+      this.handleMovie(this.state.cityToSubmit);
     } catch (error) {
       this.state({
         displayError: true,
@@ -80,17 +81,16 @@ class Home extends React.Component {
     }
   };
 
-  /**
- * Build movie call to our server the server is ready to respond. 
- * handleMovie = async () = {
-    let url = `add url path`;
-    try {
-      do axios call and set state
-    } catch () {
-      handle errors
-    }
+  handleMovie = async (cityName) => {
+    console.log('Movie search term',cityName);
+    // let url = `add url path`;
+    // try {
+    //   do axios call and set state
+    // } catch () {
+    //   handle errors
+    // }
   };
- */
+ 
 
   render() {
     return (
