@@ -69,7 +69,7 @@ class Home extends React.Component {
           },
         }
       );
-      console.log('did we get weather back',weatherToDisplay.data);
+      console.log("did we get weather back", weatherToDisplay.data);
       this.setState({
         displayError: false,
         weatherToDisplay: weatherToDisplay.data,
@@ -85,21 +85,25 @@ class Home extends React.Component {
 
   handleMovie = async (cityName) => {
     // console.log('Movie search term',cityName);
-   
     try {
-      let URL = await axios.get(`${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`);
-      console.log('url',URL);
-  } catch (error) {
-    this.setState({
-      mapImage: false,
-      displayError: true,
-      errorMessage: `An error occurred: ${error.response.status}`,
-    });
+      let URL = await axios.get(
+        `${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`
+      );
+      console.log("url", URL);
+      // this.setState({
+
+      // });
+    } catch (error) {
+        this.setState({
+          mapImage: false,
+          displayError: true,
+          errorMessage: `An error occurred: ${error.response.status}`,
+        });
+    }
   };
- 
 
   render() {
-    console.log(this.state.weatherToDisplay)
+    // console.log(this.state.weatherToDisplay);
     return (
       <>
         <Container fluid>
