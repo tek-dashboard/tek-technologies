@@ -47,7 +47,7 @@ class Home extends React.Component {
         cityDataFromServer[3],
         this.state.cityToSubmit
       );
-      // this.handleMovie(this.state.cityToSubmit);
+      this.handleMovie(this.state.cityToSubmit);
     } catch (error) {
       this.state({
         displayError: true,
@@ -85,13 +85,16 @@ class Home extends React.Component {
 
   handleMovie = async (cityName) => {
     // console.log('Movie search term',cityName);
-    let URL = await axios.get(`${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`);
-    console.log('url',URL);
-    // try {
-      
-    // } catch () {
-    //   handle errors
-    // }
+   
+    try {
+      let URL = await axios.get(`${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`);
+      console.log('url',URL);
+  } catch (error) {
+    this.setState({
+      mapImage: false,
+      displayError: true,
+      errorMessage: `An error occurred: ${error.response.status}`,
+    });
   };
  
 
