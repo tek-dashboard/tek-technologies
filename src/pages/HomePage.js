@@ -16,6 +16,7 @@ class Home extends React.Component {
       lon: "",
       weatherToDisplay: [],
       mapImage: "",
+      movieList: [],
       displayError: false,
       errorMessage: "error from state attribute",
     };
@@ -89,10 +90,10 @@ class Home extends React.Component {
       let URL = await axios.get(
         `${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`
       );
-      console.log("url", URL);
-      // this.setState({
-
-      // });
+      console.log("url", URL.data);
+      this.setState({
+        movieList: URL.data,
+      });
     } catch (error) {
         this.setState({
           mapImage: false,
@@ -103,7 +104,7 @@ class Home extends React.Component {
   };
 
   render() {
-    // console.log(this.state.weatherToDisplay);
+    console.log(this.state.movieList);
     return (
       <>
         <Container fluid>
@@ -184,6 +185,7 @@ class Home extends React.Component {
                 }}
               >
                 1
+                {/* add movies list here START  */}
               </Card>
             </Col>
             <Col>
