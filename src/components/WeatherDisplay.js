@@ -12,7 +12,7 @@ class WeatherDisplay extends Component {
           }}
         >
           {this.props.dayForecast.map((dayForecast, index) => (
-            <Accordion.Item eventKey={index}>
+            <Accordion.Item key={index}>
               <Accordion.Header>DATE: {dayForecast.time}</Accordion.Header>
               <Accordion.Body
                 style={{

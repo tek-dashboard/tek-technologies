@@ -45,9 +45,9 @@ class Home extends React.Component {
       this.getWeather(
         cityDataFromServer[2],
         cityDataFromServer[3],
-        cityDataFromServer[0]
+        this.state.cityToSubmit
       );
-      this.handleMovie(this.state.cityToSubmit);
+      // this.handleMovie(this.state.cityToSubmit);
     } catch (error) {
       this.state({
         displayError: true,
@@ -57,6 +57,7 @@ class Home extends React.Component {
   };
 
   getWeather = async (lat, lon, locationName) => {
+    console.log(lat, lon, locationName);
     try {
       const weatherToDisplay = await axios.get(
         `${process.env.REACT_APP_SERVER}/weather`,
@@ -68,6 +69,7 @@ class Home extends React.Component {
           },
         }
       );
+      console.log('did we get weather back',weatherToDisplay.data);
       this.setState({
         displayError: false,
         weatherToDisplay: weatherToDisplay.data,
@@ -82,10 +84,11 @@ class Home extends React.Component {
   };
 
   handleMovie = async (cityName) => {
-    console.log('Movie search term',cityName);
-    // let url = `add url path`;
+    // console.log('Movie search term',cityName);
+    let URL = await axios.get(`${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`);
+    console.log('url',URL);
     // try {
-    //   do axios call and set state
+      
     // } catch () {
     //   handle errors
     // }
@@ -93,6 +96,7 @@ class Home extends React.Component {
  
 
   render() {
+    console.log(this.state.weatherToDisplay)
     return (
       <>
         <Container fluid>
