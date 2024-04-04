@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export class MovieList extends Component {
+export class MovieList extends React.Component {
   render() {
-    console.log('ppprops', this.props.movieList);
+    // console.log('ppprops', this.props.movieList);
     return (
-      <div>MovieList</div>
-    )
+     
+      <>
+          {this.props.movieList.map((movie, index) => (
+       <h1 key={index}>{movie}</h1>
+         ))}
+      </>
+    );
   }
 }
 
-export default MovieList
+export default MovieList;
