@@ -7,7 +7,7 @@ export class MovieList extends React.Component {
      
       <>
           {this.props.movieList.map((movie, index) => (
-       <h1 key={index}>{movie}</h1>
+       <h1 key={index}>{movie.title}</h1>
          ))}
       </>
     );
