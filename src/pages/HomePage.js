@@ -72,7 +72,7 @@ class Home extends React.Component {
           },
         }
       );
-      console.log("did we get weather back", weatherToDisplay.data);
+      // console.log("did we get weather back", weatherToDisplay.data);
       this.setState({
         displayError: false,
         weatherToDisplay: weatherToDisplay.data,
@@ -106,7 +106,7 @@ class Home extends React.Component {
   };
 
   render() {
-    console.log(this.state.movieList);
+    console.log('dddddddd',this.state.movieList);
     return (
       <>
         <Container fluid>
