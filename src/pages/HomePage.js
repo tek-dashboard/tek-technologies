@@ -4,6 +4,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
 import WeatherDisplay from "../components/WeatherDisplay";
+import MovieList from "../components/MovieList";
 
 class Home extends React.Component {
   constructor(props) {
@@ -70,7 +71,7 @@ class Home extends React.Component {
           },
         }
       );
-      console.log("did we get weather back", weatherToDisplay.data);
+      // console.log("did we get weather back", weatherToDisplay.data);
       this.setState({
         displayError: false,
         weatherToDisplay: weatherToDisplay.data,
@@ -95,16 +96,16 @@ class Home extends React.Component {
         movieList: URL.data,
       });
     } catch (error) {
-        this.setState({
-          mapImage: false,
-          displayError: true,
-          errorMessage: `An error occurred: ${error.response.status}`,
-        });
+      this.setState({
+        mapImage: false,
+        displayError: true,
+        errorMessage: `An error occurred: ${error.response.status}`,
+      });
     }
   };
 
   render() {
-    console.log(this.state.movieList);
+    console.log("dddddddd", this.state.movieList);
     return (
       <>
         <Container fluid>
@@ -184,8 +185,8 @@ class Home extends React.Component {
                   textAlign: "center",
                 }}
               >
-                1
-                {/* add movies list here START  */}
+                1{/* add movies list here START  */}
+                <MovieList movieList={this.state.movieList} />
               </Card>
             </Col>
             <Col>
