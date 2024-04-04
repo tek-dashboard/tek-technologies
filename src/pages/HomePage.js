@@ -4,6 +4,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MapImage from "../components/MapImage";
 import WeatherDisplay from "../components/WeatherDisplay";
+import MovieList from "../components/MovieList"
 
 
 class Home extends React.Component {
