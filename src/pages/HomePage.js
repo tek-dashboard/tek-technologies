@@ -5,6 +5,7 @@ import axios from "axios";
 import MapImage from "../components/MapImage";
 import WeatherDisplay from "../components/WeatherDisplay";
 
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -186,6 +187,7 @@ class Home extends React.Component {
               >
                 1
                 {/* add movies list here START  */}
+                <MovieList movieList={this.state.movieList}/>
               </Card>
             </Col>
             <Col>
