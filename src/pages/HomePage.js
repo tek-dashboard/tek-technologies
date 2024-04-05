@@ -105,7 +105,6 @@ class Home extends React.Component {
   };
 
   render() {
-    console.log("dddddddd", this.state.movieList);
     return (
       <>
         <Container fluid>
@@ -172,7 +171,11 @@ class Home extends React.Component {
           </Row>
 
           <Row>
-            <Col>
+            <Col
+              style={{
+                marginBottom: "100px",
+              }}
+            >
               <Card
                 className="card"
                 style={{
@@ -183,6 +186,7 @@ class Home extends React.Component {
                   backgroundColor: "#c0d6df",
                   marginTop: "2rem",
                   textAlign: "center",
+                  zIndex: "0",
                 }}
               >
                 1{/* add movies list here START  */}
