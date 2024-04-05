@@ -6,7 +6,7 @@ export class MovieList extends React.Component {
     // console.log('ppprops', this.props.movieList);
     return (
       <>
-        <ul>
+       <Carousel>
           {this.props.movieList.map((movie, index) => (
             <>
               <li key={index}>
@@ -21,7 +21,7 @@ export class MovieList extends React.Component {
               </li>
             </>
           ))}
-        </ul>
+        </Carousel>
       </>
     );
   }
@@ -30,7 +30,7 @@ export class MovieList extends React.Component {
 export default MovieList;
 
 {/** 
-<Carousel>
+
 <Carousel.Item>
   <ExampleCarouselImage text="First slide" />
   <Carousel.Caption>
