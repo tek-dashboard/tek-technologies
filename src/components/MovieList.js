@@ -13,7 +13,7 @@ export class MovieList extends React.Component {
           alt={this.props.title}
           className="w-50"
         />
-        <Carousel.Caption>
+        <Carousel.Caption className="carousel-caption-none">
           <h5
             style={{
               backgroundColor: "teal",
