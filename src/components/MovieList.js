@@ -1,5 +1,7 @@
 /* eslint-disable no-lone-blocks */
 import React from "react";
+import { Carousel } from "react-bootstrap";
+
 
 export class MovieList extends React.Component {
   render() {
