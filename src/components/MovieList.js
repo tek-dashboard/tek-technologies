@@ -5,7 +5,6 @@ import "../css/index.css";
 
 export class MovieList extends React.Component {
   render() {
-    // console.log('ppprops', this.props.movieList);
     let movieList = this.props.movieList.map((movie, index) => (
       <Carousel.Item key={index}>
         <img
