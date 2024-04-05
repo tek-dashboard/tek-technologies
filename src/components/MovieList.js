@@ -2,10 +2,16 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "../css/index.css";
+// import defaultImage from '../assets/placeholderimg.png';
+
 
 export class MovieList extends React.Component {
+
+  
   render() {
+    // console.log(defaultImage);
     let movieList = this.props.movieList.map((movie, index) => (
+      
       <Carousel.Item key={index}>
         <img
           src={`https://image.tmdb.org/t/p/w500/${movie.src}`}

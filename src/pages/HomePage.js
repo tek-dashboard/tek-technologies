@@ -91,7 +91,6 @@ class Home extends React.Component {
       let URL = await axios.get(
         `${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`
       );
-      console.log("url", URL.data);
       this.setState({
         movieList: URL.data,
       });
