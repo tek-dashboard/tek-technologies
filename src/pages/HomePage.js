@@ -86,7 +86,6 @@ class Home extends React.Component {
   };
 
   handleMovie = async (cityName) => {
-    // console.log('Movie search term',cityName);
     try {
       let URL = await axios.get(
         `${process.env.REACT_APP_SERVER}/movies?movieSearch=${cityName}`
@@ -104,6 +103,7 @@ class Home extends React.Component {
   };
 
   render() {
+    console.log(this.state.movieList);
     return (
       <>
         <Container fluid>

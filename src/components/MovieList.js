@@ -9,15 +9,15 @@ export class MovieList extends React.Component {
 
   
   render() {
-    // console.log(defaultImage);
     let movieList = this.props.movieList.map((movie, index) => (
       
       <Carousel.Item key={index}>
         <img
-          src={`https://image.tmdb.org/t/p/w500/${movie.src}`}
+          src={`${movie.src}`}
           alt={this.props.title}
           className="w-50"
         />
+    
         <Carousel.Caption className="carousel-caption-none">
           <h5
             style={{
