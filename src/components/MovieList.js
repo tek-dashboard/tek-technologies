@@ -1,26 +1,28 @@
 /* eslint-disable no-lone-blocks */
 import React from "react";
-import { Carousel } from "react-bootstrap";
-
+import { Carousel, ExampleCarouselImage } from "react-bootstrap";
 
 export class MovieList extends React.Component {
   render() {
     // console.log('ppprops', this.props.movieList);
     return (
       <>
-       <Carousel>
+        <Carousel>
           {this.props.movieList.map((movie, index) => (
             <>
-              <li key={index}>
-                <h6>{movie.title}</h6>
+              <ExampleCarouselImage text="First slide" />
+
+              <Carousel.Item key={index}>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.src}`}
                   alt={this.props.title}
                   height={"75px"}
                   width={"75px"}
-                
                 />
-              </li>
+              </Carousel.Item>
+              <Carousel.Caption>
+                <h6>{movie.title}</h6>
+              </Carousel.Caption>
             </>
           ))}
         </Carousel>
@@ -31,15 +33,10 @@ export class MovieList extends React.Component {
 
 export default MovieList;
 
-{/** 
+{
+  /** 
 
-<Carousel.Item>
-  <ExampleCarouselImage text="First slide" />
-  <Carousel.Caption>
-    <h3>First slide label</h3>
-    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-  </Carousel.Caption>
-</Carousel.Item>
+
 <Carousel.Item>
   <ExampleCarouselImage text="Second slide" />
   <Carousel.Caption>
@@ -57,4 +54,5 @@ export default MovieList;
   </Carousel.Caption>
 </Carousel.Item>
 </Carousel>
-*/}
+*/
+}
