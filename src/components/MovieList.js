@@ -20,8 +20,6 @@ export class MovieList extends React.Component {
               borderRadius: "5px",
               width: "max-content",
               margin: "auto",
-              padding: "5px",
-              position: "none",
             }}
           >
             {movie.title}
