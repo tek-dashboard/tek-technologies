@@ -2,16 +2,18 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "../css/index.css";
+import defaultImage from "../assets/placeholderimg.png";
 
 export class MovieList extends React.Component {
   render() {
     let movieList = this.props.movieList.map((movie, index) => (
       <Carousel.Item key={index}>
         <img
-          src={`https://image.tmdb.org/t/p/w500/${movie.src}`}
+          src={movie.src ? movie.src : defaultImage}
           alt={this.props.title}
           className="w-50"
         />
+
         <Carousel.Caption className="carousel-caption-none">
           <h5
             style={{
@@ -26,6 +28,7 @@ export class MovieList extends React.Component {
         </Carousel.Caption>
       </Carousel.Item>
     ));
+
     return (
       <>
         <Carousel className="carouselNone">{movieList}</Carousel>
