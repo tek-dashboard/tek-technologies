@@ -2,18 +2,19 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "../css/index.css";
-// import defaultImage from '../assets/placeholderimg.png';
+import defaultImage from '../assets/placeholderimg.png';
 
 
 export class MovieList extends React.Component {
 
   
   render() {
+  
     let movieList = this.props.movieList.map((movie, index) => (
       
       <Carousel.Item key={index}>
         <img
-          src={`${movie.src}`}
+          src={movie.src ? movie.src : defaultImage}
           alt={this.props.title}
           className="w-50"
         />
@@ -32,6 +33,7 @@ export class MovieList extends React.Component {
         </Carousel.Caption>
       </Carousel.Item>
     ));
+
     return (
       <>
         <Carousel className="carouselNone">{movieList}</Carousel>
