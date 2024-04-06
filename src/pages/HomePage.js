@@ -103,7 +103,6 @@ class Home extends React.Component {
   };
 
   render() {
-    console.log(this.state.movieList);
     return (
       <>
         <Container fluid>
