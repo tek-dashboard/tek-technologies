@@ -103,6 +103,7 @@ class Home extends React.Component {
   };
 
   render() {
+    console.log(this.state.cityToSubmit);
     return (
       <>
         <Container fluid>
